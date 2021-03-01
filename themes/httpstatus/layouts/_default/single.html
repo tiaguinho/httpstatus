@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<h3 class="font-mono text-base text-gray-600">{{ .Params.category }}</h3>
+<h1 class="text-gray-500 text-xl">
+  <span class="font-bold text-indigo-500">{{ .Title }}</span> {{ .Params.subtitle }}
+</h1>
+
+<div class="pt-2 pb-4 text-gray-500 text-base leading-normal mb-1">
+  {{ .Content }}
+</div>
+
+<h1 class="text-gray-500 text-lg mb-3">
+  Referências para o código <span class="font-bold text-indigo-500">{{ .Title }}</span> 
+</h1>
+
+<ul class="list-none mt-1 mb-3 space-y-2">
+  <li class="text-gray-500 text-sm">
+    Rails HTTP Status Symbol <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.rails" }}</span>
+  </li>
+  <li class="text-gray-500 text-sm">
+    Go HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.go" }}</span>
+  </li>
+  <li class="text-gray-500 text-sm">
+    Symfony HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.symfony" }}</span>
+  </li>
+  <li class="text-gray-500 text-sm">
+    Python2 HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python2" }}</span>
+  </li>
+  <li class="text-gray-500 text-sm">
+    Python3+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python3" }}</span>
+  </li>
+  <li class="text-gray-500 text-sm">
+    Python3.5+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python35" }}</span>
+  </li>
+</ul>
+
+{{ end }}

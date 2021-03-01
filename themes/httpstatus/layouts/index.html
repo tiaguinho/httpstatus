@@ -1,0 +1,241 @@
+{{ define "main" }}
+
+<div class="box-content">
+  <h1 class="text-xl font-mono text-indigo-500 mb-3">Códigos de Status HTTP</h1>
+  <p class="text-gray-500 text-sm leading-normal mb-1">Esse site é uma referência a todos os códigos de status HTTP com
+  suas definições e exemplos de código em algumas linguagens/frameworks.</p>
+  <p class="text-gray-500 text-sm leading-normal">Você pode acessar <span class="shadow-sm px-1
+    italic">httpstatus.com.br/codigo</span> para ver um código especifico ou clicar na listagem abaixo.</p>
+</div>
+
+<hr class="bg-gray-100 my-6" />
+
+<div class="box-content">
+
+  <h5 class="font-mono text-base text-gray-600">1xx Informativo</h5>
+  <ul class="list-none mt-1 mb-3 space-y-0.5">
+    <li class="text-gray-500 text-sm">
+      <a href="/100"><span class="text-xs font-bold text-indigo-500">100</span> Continue</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/101"><span class="text-xs font-bold text-indigo-500">101</span> Switching Protocols</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/102"><span class="text-xs font-bold text-indigo-500">102</span> Processing</a>
+    </li>
+  </ul>
+
+  <h5 class="font-mono text-base text-gray-600">2xx Sucesso</h5>
+  <ul class="list-none mt-1 mb-3 space-y-0.5">
+    <li class="text-gray-500 text-sm">
+      <a href="/200"><span class="text-xs font-bold text-indigo-500">200</span> OK</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/201"><span class="text-xs font-bold text-indigo-500">201</span> Created</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/202"><span class="text-xs font-bold text-indigo-500">202</span> Accepted</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/203"><span class="text-xs font-bold text-indigo-500">203</span> Non-authoritative
+        Information</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/204"><span class="text-xs font-bold text-indigo-500">204</span> No Content</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/205"><span class="text-xs font-bold text-indigo-500">205</span> Reset Content</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/206"><span class="text-xs font-bold text-indigo-500">206</span> Partial Content</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/207"><span class="text-xs font-bold text-indigo-500">207</span> Multi-Status</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/208"><span class="text-xs font-bold text-indigo-500">208</span> Already Reported</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/226"><span class="text-xs font-bold text-indigo-500">226</span> IM Used</a>
+    </li>
+  </ul>
+
+  <h5 class="font-mono text-base text-gray-600">3xx Redirecionamento</h5>
+  <ul class="list-none mt-1 mb-3 space-y-0.5">
+    <li class="text-gray-500 text-sm">
+      <a href="/300"><span class="text-xs font-bold text-indigo-500">300</span> Multiple Choices</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/301"><span class="text-xs font-bold text-indigo-500">301</span> Moved Permanently</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/302"><span class="text-xs font-bold text-indigo-500">302</span> Found</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/303"><span class="text-xs font-bold text-indigo-500">303</span> See Other</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/304"><span class="text-xs font-bold text-indigo-500">304</span> Not Modified</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/305"><span class="text-xs font-bold text-indigo-500">305</span> Use Proxy</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/307"><span class="text-xs font-bold text-indigo-500">307</span> Temporary Redirect</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/308"><span class="text-xs font-bold text-indigo-500">308</span> Permanent Redirect</a>
+    </li>
+  </ul>
+
+  <h5 class="font-mono text-base text-gray-600">4xx Erro no Cliente</h5>
+  <ul class="list-none mt-1 mb-3 space-y-0.5">
+    <li class="text-gray-500 text-sm">
+      <a href="/400"><span class="text-xs font-bold text-indigo-500">400</span> Bad Request</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/401"><span class="text-xs font-bold text-indigo-500">401</span> Unauthorized</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/402"><span class="text-xs font-bold text-indigo-500">402</span> Payment Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/403"><span class="text-xs font-bold text-indigo-500">403</span> Forbidden</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/404"><span class="text-xs font-bold text-indigo-500">404</span> Not Found</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/405"><span class="text-xs font-bold text-indigo-500">405</span> Method Not Allowed</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/406"><span class="text-xs font-bold text-indigo-500">406</span> Not Acceptable</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/407"><span class="text-xs font-bold text-indigo-500">407</span> Proxy Authentication
+      Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/408"><span class="text-xs font-bold text-indigo-500">408</span> Request Timeout</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/409"><span class="text-xs font-bold text-indigo-500">409</span> Conflict</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/410"><span class="text-xs font-bold text-indigo-500">410</span> Gone</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/411"><span class="text-xs font-bold text-indigo-500">411</span> Length Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/412"><span class="text-xs font-bold text-indigo-500">412</span> Precondition Failed</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/413"><span class="text-xs font-bold text-indigo-500">413</span> Payload Too Large</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/414"><span class="text-xs font-bold text-indigo-500">414</span> Request-URI Too Long</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/415"><span class="text-xs font-bold text-indigo-500">415</span> Unsupported Media
+        Type</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/416"><span class="text-xs font-bold text-indigo-500">416</span> Requested Range Not
+      Satisfiable</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/417"><span class="text-xs font-bold text-indigo-500">417</span> Expectation Failed</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/418"><span class="text-xs font-bold text-indigo-500">418</span> I'm a teapot</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/421"><span class="text-xs font-bold text-indigo-500">421</span> Misdirected Request</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/422"><span class="text-xs font-bold text-indigo-500">422</span> Unprocessable Entity</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/423"><span class="text-xs font-bold text-indigo-500">423</span> Locked</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/424"><span class="text-xs font-bold text-indigo-500">424</span> Failed Dependency</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/426"><span class="text-xs font-bold text-indigo-500">426</span> Upgrade Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/428"><span class="text-xs font-bold text-indigo-500">428</span> Precondition
+        Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/429"><span class="text-xs font-bold text-indigo-500">429</span> Too Many Requests</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/431"><span class="text-xs font-bold text-indigo-500">431</span> Request Header
+        Fields Too Large</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/444"><span class="text-xs font-bold text-indigo-500">444</span> Connection Closed
+        Without Response</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/451"><span class="text-xs font-bold text-indigo-500">451</span> Unavailable For
+        Legal Reasons</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/499"><span class="text-xs font-bold text-indigo-500">499</span> Client Closed
+        Request</a>
+    </li>
+  </ul>
+
+  <h5 class="font-mono text-base text-gray-600">5xx Erro no Servidor</h5>
+  <ul class="list-none mt-1 mb-3 space-y-0.5">
+    <li class="text-gray-500 text-sm">
+      <a href="/500"><span class="text-xs font-bold text-indigo-500">500</span> Internal Server
+        Error</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/501"><span class="text-xs font-bold text-indigo-500">501</span> Not Implemented</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/502"><span class="text-xs font-bold text-indigo-500">502</span> Bad Gateway</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/503"><span class="text-xs font-bold text-indigo-500">503</span> Service Unavailable</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/504"><span class="text-xs font-bold text-indigo-500">504</span> Gateway Timeout</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/505"><span class="text-xs font-bold text-indigo-500">505</span> HTTP Version Not
+        Supported</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/506"><span class="text-xs font-bold text-indigo-500">506</span> Variant Also
+        Negociates</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/507"><span class="text-xs font-bold text-indigo-500">507</span> Insufficient Storage</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/508"><span class="text-xs font-bold text-indigo-500">508</span> Loop Detected</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/510"><span class="text-xs font-bold text-indigo-500">510</span> Not Extended</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/511"><span class="text-xs font-bold text-indigo-500">511</span> Network
+        Authentication Required</a>
+    </li>
+    <li class="text-gray-500 text-sm">
+      <a href="/599"><span class="text-xs font-bold text-indigo-500">599</span> Network Connection
+        Timeout Error</a>
+    </li>
+  </ul>
+
+
+</div>
+
+{{ end }}

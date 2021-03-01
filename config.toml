@@ -1,0 +1,8 @@
+baseURL = "http://httpstatus.com.br/"
+languageCode = "pt-br"
+title = "HTTP Status"
+theme = "httpstatus"
+
+[permalinks]
+  posts = "/:title"
+
