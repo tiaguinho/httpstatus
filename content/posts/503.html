@@ -1,0 +1,27 @@
+---
+title: "503"
+subtitle: "Service Unavailable"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  rails: :service_unavailable
+  go: http.StatusServiceUnavailable
+  symfony: Response::HTTP_SERVICE_UNAVAILABLE
+  python2: httplib.SERVICE_UNAVAILABLE
+  python3: http.client.SERVICE_UNAVAILABLE
+  python35: http.HTTPStatus.SERVICE_UNAVAILABLE
+---
+
+<p class="mb-1 text-lg">O servidor atualmente não consegue lidar com a solicitação devido a uma sobrecarga temporária ou manutenção programada, que provavelmente será aliviada após algum atraso.</p>
+
+<p class="text-sm mb-3">O servidor PODE enviar um campo de cabeçalho Retry-After para sugerir um período de tempo apropriado para o cliente esperar antes de tentar novamente a solicitação.</p>
+<p class="text-sm">Nota: A existência do código de status 503 não significa que um servidor tenha que usá-lo ao ficar sobrecarregado. Alguns servidores podem simplesmente recusar a conexão.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.6.4">RFC7231 Section 6.6.4</a>
+</span></small>
+
+

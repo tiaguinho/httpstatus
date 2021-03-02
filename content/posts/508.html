@@ -1,0 +1,20 @@
+---
+title: "508"
+subtitle: "Loop Detected"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  symfony: Response::HTTP_LOOP_DETECTED
+---
+
+<p class="mb-1 text-lg">O servidor encerrou uma operação porque encontrou um loop infinito ao
+processar uma solicitação com "Depth: infinity". Este status indica que toda a operação falhou.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc5842#section-7.2">RFC5842 Section 7.2</a>
+</span></small>
+
+

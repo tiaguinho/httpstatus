@@ -1,0 +1,23 @@
+---
+title: "510"
+subtitle: "Not Extended"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  rails: :not_extended
+  symfony: Response::HTTP_NOT_EXTENDED
+---
+
+<p class="mb-1 text-lg">A política de acesso ao recurso não foi atendida na solicitação. O servidor deve enviar de volta todas as informações necessárias para o cliente emitir uma solicitação estendida.</p>
+
+<p class="text-sm mb-3">Está fora do escopo desta especificação especificar como as extensões informam o cliente.</p>
+<p class="text-sm">Se a resposta 510 contiver informações sobre extensões que não estavam presentes na solicitação inicial, o cliente PODE repetir a solicitação se tiver motivos para acreditar que pode cumprir a política de extensão, modificando a solicitação de acordo com as informações fornecidas na resposta 510. Caso contrário, o cliente PODE apresentar ao usuário qualquer entidade incluída na resposta 510, desde que essa entidade possa incluir informações diagnósticas relevantes.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc2774#section-7">RFC2774 Section 7</a>
+</span></small>
+
+

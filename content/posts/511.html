@@ -1,0 +1,56 @@
+---
+title: "511"
+subtitle: "Network Authentication Required"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  symfony: Response::HTTP_NETWORK_AUTHENTICATION_REQUIRED
+---
+
+<p class="mb-1 text-lg">O cliente precisa se autenticar para obter acesso à rede.</p>
+
+<p class="text-sm mb-3">A representação da resposta DEVE conter um link para um recurso que permite ao usuário enviar credenciais (por exemplo, com um formulário HTML).</p>
+<p class="text-sm mb-3">Observe que a resposta 511 NÃO DEVE conter um desafio ou a própria interface de login, porque os navegadores mostram a interface de login como estando associada ao URL originalmente solicitado, o que pode causar confusão.</p>
+<p class="text-sm mb-3">O status 511 NÃO DEVE ser gerado pelos servidores de origem; destina-se ao uso para interceptar proxies que são interpostos como um meio de controlar o acesso à rede.</p>
+<p class="text-sm mb-3">As respostas com o código de status 511 NÃO DEVEM ser armazenadas por um cache.</p>
+<p class="text-sm mb-3">O código de status 511 é projetado para mitigar problemas causados por "portais cativos" para software (especialmente agentes não navegadores) que estão esperando uma resposta do servidor para o qual uma solicitação foi feita, e não da infraestrutura de rede intermediária. Não se destina a encorajar a implantação de portais cativos - apenas para limitar os danos causados por eles.</p>
+<p class="text-sm mb-3">Uma operadora de rede que deseja exigir alguma autenticação, aceitação de
+termos ou outra interação do usuário antes de conceder acesso geralmente o faz identificando
+clientes que não o fizeram ("clientes desconhecidos") usando seus endereços de Media Access Control (MAC).</p>
+<p class="text-sm mb-3">Os clientes desconhecidos têm então todo o tráfego bloqueado, exceto aquele na porta TCP 80, que é enviado a um servidor HTTP (o "servidor de login") dedicado a "efetuar login" de clientes desconhecidos e, claro, o tráfego para o próprio servidor de login.</p>
+<p class="text-sm mb-3">Por exemplo, um agente de usuário pode se conectar a uma rede e fazer a seguinte solicitação HTTP na porta TCP 80:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+          overflow-hidden"
+  disabled style="height: 60px;">
+  GET /index.htm HTTP/1.1
+  Host: www.example.com
+</textarea>
+<p class="text-sm mb-3">Ao receber essa solicitação, o servidor de login geraria uma resposta 511:</p>
+<textarea class="px-3 py-1 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+                 overflow-hidden"
+  disabled style="height: 430px;">
+HTTP/1.1 511 Network Authentication Required
+Content-Type: text/html
+
+<html>
+  <head>
+    <title>Network Authentication Required</title>
+    <meta http-equiv="refresh" content="0; url=https://login.example.net/">
+  </head>
+  <body>
+    <p>You need to <a href="https://login.example.net/">
+    authenticate with the local network</a> in order to gain
+    access.</p>
+  </body>
+</html>
+</textarea>
+<p class="text-sm">Aqui, o código de status 511 garante que os clientes que não sejam navegadores não interpretem a resposta como sendo do servidor de origem, e o elemento META HTML redireciona o agente do usuário para o servidor de login.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc6585#section-6">RFC2585 Section 6</a>
+</span></small>
+
+

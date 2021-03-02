@@ -1,0 +1,27 @@
+---
+title: "505"
+subtitle: "Http Version Not Supported"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  rails: :http_version_not_supported
+  go: http.StatusHTTPVersionNotSupported
+  symfony: Response::HTTP_VERSION_NOT_SUPPORTED
+  python2: httplib.VERSION_NOT_SUPPORTED
+  python3: http.client.VERSION_NOT_SUPPORTED
+  python35: http.HTTPStatus.VERSION_NOT_SUPPORTED
+---
+
+<p class="mb-1 text-lg">O servidor não oferece suporte ou se recusa a aceitar a versão principal do HTTP usada na mensagem de solicitação.</p>
+
+<p class="text-sm">O servidor está indicando que não pode ou não deseja concluir a solicitação
+usando a mesma versão principal do cliente, conforme descrito na <a href="https://tools.ietf.org/html/rfc7230#section-2.6">Seção 2.6 do RFC7230</a>, exceto com esta mensagem de erro. O servidor DEVE gerar uma representação para a resposta 505 que descreva porque essa versão não é suportada e quais outros protocolos são suportados por esse servidor</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.6.6">RFC7231 Section 6.6.6</a>
+</span></small>
+
+

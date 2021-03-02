@@ -1,0 +1,24 @@
+---
+title: "504"
+subtitle: "Gateway Timeout"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "5xx Server Error"
+references:
+  rails: :gateway_timeout
+  go: http.StatusGatewayTimeout
+  symfony: Response::HTTP_GATEWAY_TIMEOUT
+  python2: httplib.GATEWAY_TIMEOUT
+  python3: http.client.GATEWAY_TIMEOUT
+  python35: http.HTTPStatus.GATEWAY_TIMEOUT
+---
+
+<p class="mb-1 text-lg">O servidor, ao atuar como gateway ou proxy, não recebeu uma resposta oportuna de um servidor upstream que precisava acessar para concluir a solicitação.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.6.5">RFC7231 Section 6.6.5</a>
+</span></small>
+
+
