@@ -1,0 +1,29 @@
+---
+title: "100"
+subtitle: "Continue"
+date: 2021-02-11T09:54:15-03:00
+draft: false
+category: "1xx Informativo"
+references:
+  rails: :continue
+  go: http.StatusContinue
+  symfony: Response::HTTP_CONTINUE
+  python2: httplib.CONTINUE
+  python3: http.client.CONTINUE
+  python35: http.HTTPStatus.CONTINUE
+---
+
+<p class="mb-1 text-lg">A parte inicial de uma solicitação foi recebida e ainda não foi rejeitada pelo servidor. O servidor pretende enviar uma resposta final após o pedido ter sido totalmente recebido e atendido.</p>
+
+<p class="text-sm mb-3">Quando a solicitação contém um campo de cabeçalho Expect que inclui uma
+expectativa de 100-continue, a resposta 100 indica que o servidor deseja receber o payload da solicitação. O cliente deve continuar enviando a solicitação e descartar a resposta 100.</p>
+<p class="text-sm">Se a solicitação não continha um campo de cabeçalho Expect contendo a expectativa
+de 100-continue, o cliente pode simplesmente descartar essa resposta provisória.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.2.1">RFC7231 Section 6.1.1</a>
+</span></small>
+
+

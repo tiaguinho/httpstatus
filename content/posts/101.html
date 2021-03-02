@@ -1,0 +1,29 @@
+---
+title: "101"
+subtitle: "Switching Protocols"
+date: 2021-02-11T09:54:15-03:00
+draft: false
+category: "1xx Informativo"
+references:
+  rails: :switching_protocols
+  go: http.StatusSwitchingProtocols
+  symfony: Response::HTTP_SWITCHING_PROTOCOLS
+  python2: httplib.SWITCHING_PROTOCOLS
+  python3: http.client.SWITCHING_PROTOCOLS
+  python35: http.HTTPStatus.SWITCHING_PROTOCOLS
+---
+
+<p class="mb-1 text-lg">O servidor entende e está disposto a atender a solicitação do cliente, através do campo do cabeçalho de atualização, de alteração do protocolo do aplicativo utilizado nesta conexão.</p>
+
+<p class="text-sm mb-3">O servidor DEVE gerar um campo de cabeçalho de atualização na resposta que
+indica qual(is) protocolo(s) será(ão) alterado(s) imediatamente após a linha vazia que encerra a
+resposta 101.</p>
+<p class="text-sm">Presume-se que o servidor só concordará em alternar protocolos quando for vantajoso fazê-lo. Por exemplo, mudar para uma versão mais recente de HTTP pode ser vantajoso em relação às versões mais antigas, e mudar para um protocolo síncrono em tempo real pode ser vantajoso ao fornecer recursos que usam tais recursos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.2.2">RFC7231 Section 6.2.2</a>
+</span></small>
+
+
