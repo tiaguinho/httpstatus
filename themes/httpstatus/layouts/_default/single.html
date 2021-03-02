@@ -14,24 +14,36 @@
 </h1>
 
 <ul class="list-none mt-1 mb-3 space-y-2">
-  <li class="text-gray-500 text-sm">
-    Rails HTTP Status Symbol <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.rails" }}</span>
-  </li>
-  <li class="text-gray-500 text-sm">
-    Go HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.go" }}</span>
-  </li>
-  <li class="text-gray-500 text-sm">
-    Symfony HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.symfony" }}</span>
-  </li>
-  <li class="text-gray-500 text-sm">
-    Python2 HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python2" }}</span>
-  </li>
-  <li class="text-gray-500 text-sm">
-    Python3+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python3" }}</span>
-  </li>
-  <li class="text-gray-500 text-sm">
-    Python3.5+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python35" }}</span>
-  </li>
+  {{ if $.Param "references.rails" }}
+    <li class="text-gray-500 text-sm">
+      Rails HTTP Status Symbol <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.rails" }}</span>
+    </li>
+  {{ end }}
+  {{ if $.Param "references.go" }}
+    <li class="text-gray-500 text-sm">
+      Go HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.go" }}</span>
+    </li>
+  {{ end }}
+  {{ if $.Param "references.symfony" }}
+    <li class="text-gray-500 text-sm">
+      Symfony HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.symfony" }}</span>
+    </li>
+  {{ end }}
+  {{ if $.Param "references.python2" }}
+    <li class="text-gray-500 text-sm">
+      Python2 HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python2" }}</span>
+    </li>
+  {{ end }}
+  {{ if $.Param "references.python3" }}
+    <li class="text-gray-500 text-sm">
+      Python3+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python3" }}</span>
+    </li>
+  {{ end }}
+  {{ if $.Param "references.python35" }}
+    <li class="text-gray-500 text-sm">
+      Python3.5+ HTTP Status Constant <span class="border border-solid border-gray-200 rounded-md px-1">{{ $.Param "references.python35" }}</span>
+    </li>
+  {{ end }}
 </ul>
 
 {{ end }}
