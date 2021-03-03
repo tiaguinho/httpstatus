@@ -1,0 +1,37 @@
+---
+title: "304"
+subtitle: "Not Modified"
+date: 2021-03-01T14:14:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :not_modified
+  go: http.StatusNotModified
+  symfony: Response::HTTP_NOT_MODIFIED
+  python2: httplib.NOT_MODIFIED
+  python3: http.client.NOT_MODIFIED
+  python35: http.HTTPStatus.NOT_MODIFIED
+---
+
+<p class="mb-1 text-lg">Uma solicitação GET ou HEAD condicional foi recebida e teria resultado em
+uma resposta <a href="/200">200 OK</a> se não fosse pelo fato de que a condição foi avaliada como falsa.</p>
+
+<p class="text-sm mb-3">Em outras palavras, não há necessidade de o servidor transferir uma
+representação do recurso de destino porque a solicitação indica que o cliente, que tornou a
+solicitação condicional, já possui uma representação válida; o servidor está, portanto,
+redirecionando o cliente para fazer uso dessa representação armazenada como se fosse a carga de uma
+resposta <a href="/200">200 OK</a></p>
+<p class="text-sm mb-3">O servidor que gera uma resposta 304 DEVE gerar qualquer um dos seguintes
+campos de cabeçalho que teriam sido enviados em uma resposta <a href="/200">200 OK</a> para a mesma solicitação: Cache-Control, Content-Location, Date, ETag, Expires e Vary.</p>
+<p class="text-sm mb-3">Uma vez que o objetivo de uma resposta 304 é minimizar a transferência de informações quando o destinatário já tem uma ou mais representações em cache, um remetente NÃO DEVE gerar metadados de representação além dos campos listados acima, a menos que esses metadados existam com o propósito de orientar as atualizações de cache (por exemplo, Última modificação pode ser útil se a resposta não tiver um campo ETag).</p>
+<p class="text-sm mb-3">Os requisitos em um cache que recebe uma resposta 304 são definidos na <a
+   href=https://tools.ietf.org/html/rfc7234#section-4.3.4"">Seção 4.3.4 do RFC7234</a>. Se a solicitação condicional foi originada de um cliente de saída, como um agente de usuário com seu próprio cache enviando um GET condicional para um proxy compartilhado, então o proxy DEVERIA encaminhar a 304 resposta a esse cliente.</p>
+<p class="text-sm">Uma resposta 304 não pode conter um corpo de mensagem; sempre termina com a primeira linha vazia após os campos do cabeçalho.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7232#section-4.1">RFC7232 Section 4.1</a>
+</span></small>
+
+

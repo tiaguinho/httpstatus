@@ -1,0 +1,30 @@
+---
+title: "303"
+subtitle: "See Other"
+date: 2021-03-01T14:11:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :see_other
+  go: http.StatusSeeOther
+  symfony: Response::HTTP_SEE_OTHER
+  python2: httplib.SEE_OTHER
+  python3: http.client.SEE_OTHER
+  python35: http.HTTPStatus.SEE_OTHER
+---
+
+<p class="mb-1 text-lg">O servidor está redirecionando o agente do usuário para um recurso
+diferente, conforme indicado por um URI no campo de cabeçalho Location, que se destina a fornecer uma resposta indireta à solicitação original.</p>
+
+<p class="text-sm mb-3">Um agente de usuário pode executar uma solicitação de recuperação direcionada a esse URI (uma solicitação GET ou HEAD se estiver usando HTTP), que também pode ser redirecionado e apresentar o resultado final como uma resposta à solicitação original. Observe que o novo URI no campo de cabeçalho Location não é considerado equivalente ao URI de solicitação efetiva.</p>
+<p class="text-sm mb-3">Este código de status é aplicável a qualquer método HTTP. É usado principalmente para permitir a saída de uma ação POST para redirecionar o agente do usuário para um recurso selecionado, desde que forneça as informações correspondentes à resposta POST em uma forma que pode ser identificada separadamente, marcada e armazenada em cache, independentemente do pedido original.</p>
+<p class="text-sm mb-3">Uma resposta 303 a uma solicitação GET indica que o servidor de origem não tem uma representação do recurso de destino que pode ser transferido pelo servidor sobre HTTP. No entanto, o valor do campo Local se refere a um recurso que é descritivo do recurso de destino, de forma que fazer uma solicitação de recuperação nesse outro recurso pode resultar em uma representação que é útil para os destinatários, sem implicar que representa o recurso de destino original. Observe que as respostas às perguntas sobre o que pode ser representado, quais representações são adequadas e o que pode ser uma descrição útil estão fora do escopo do HTTP.</p>
+<p class="text-sm">Exceto para respostas a uma solicitação HEAD, a representação de uma resposta 303 deve conter uma pequena nota de hipertexto com um hiperlink para a mesma referência de URI fornecida no campo de cabeçalho Localização.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.4.4">RFC7231 Section 6.4.4</a>
+</span></small>
+
+

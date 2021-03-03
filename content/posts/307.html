@@ -1,0 +1,33 @@
+---
+title: "307"
+subtitle: "Temporary Redirect"
+date: 2021-03-01T14:20:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :temporary_redirect
+  go: http.StatusTemporaryRedirect
+  symfony: Response::HTTP_TEMPORARY_REDIRECT
+  python2: httplib.TEMPORARY_REDIRECT
+  python3: http.client.TEMPORARY_REDIRECT
+  python35: http.HTTPStatus.TEMPORARY_REDIRECT
+---
+
+<p class="mb-1 text-lg">O recurso de destino reside temporariamente em um URI diferente e o agente do usuário NÃO DEVE alterar o método de solicitação se executar um redirecionamento automático para esse URI.</p>
+
+<p class="text-sm mb-3">Como o redirecionamento pode mudar com o tempo, o cliente deve continuar usando o URI de solicitação efetiva original para solicitações futuras.</p>
+<p class="text-sm mb-3">O servidor DEVE gerar um campo de cabeçalho Location na resposta contendo uma referência de URI para os diferentes URI. O agente do usuário PODE usar o valor do campo Localização para redirecionamento automático. A carga útil de resposta do servidor geralmente contém uma pequena nota de hipertexto com um hiperlink para os diferentes URIs.</p>
+<p class="text-sm">Nota: Este código de status é semelhante a 302 Found, exceto que não permite
+alterar o método de solicitação de POST para GET. Esta especificação não define nenhuma
+contrapartida equivalente para <a href="/301">301 Moved Permanently</a> (<a
+                                  href="https://tools.ietf.org/html/rfc7238">RFC7238</a>, no
+                                entanto, propõe a definição do código de status <a href="/308">308
+                                  Permanent Redirect</a> para este fim).</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.4.7">RFC7231 Section 6.4.7</a>
+</span></small>
+
+

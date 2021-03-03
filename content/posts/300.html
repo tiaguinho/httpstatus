@@ -1,0 +1,30 @@
+---
+title: "300"
+subtitle: "Multiple Choices"
+date: 2021-03-01T11:54:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :multiple_choices
+  go: http.StatusMultipleChoices
+  symfony: Response::HTTP_MULTIPLE_CHOICES
+  python2: httplib.MULTIPLE_CHOICES
+  python3: http.client.MULTIPLE_CHOICES
+  python35: http.HTTPStatus.MULTIPLE_CHOICES
+---
+
+<p class="mb-1 text-lg">O recurso de destino tem mais de uma representação, cada uma com seu próprio identificador mais específico, e informações sobre as alternativas estão sendo fornecidas para que o usuário (ou agente do usuário) possa selecionar uma representação preferida redirecionando sua solicitação para um ou mais desses identificadores .</p>
+
+<p class="text-sm mb-3">Em outras palavras, o servidor deseja que o agente do usuário se envolva em uma negociação reativa para selecionar a(s) representação(ões) mais apropriada(s) para suas necessidades.</p>
+<p class="text-sm mb-3">Se o servidor tiver uma escolha preferida, ele DEVE gerar um campo de cabeçalho Location contendo uma referência de URI de escolha preferencial. O agente do usuário PODE usar o valor do campo Localização para redirecionamento automático.</p>
+<p class="text-sm mb-3">Para métodos de solicitação diferentes do HEAD, o servidor DEVE gerar uma carga útil na resposta 300 contendo uma lista de metadados de representação e referência (s) URI a partir da qual o usuário ou agente do usuário pode escolher o mais preferido. O agente do usuário PODE fazer uma seleção dessa lista automaticamente se entender o tipo de mídia fornecido. Um formato específico para seleção automática não é definido por esta especificação porque o HTTP tenta permanecer ortogonal à definição de suas cargas úteis. Na prática, a representação é fornecida em algum formato facilmente analisado que se acredita ser aceitável para o agente do usuário, conforme determinado pelo design compartilhado ou negociação de conteúdo, ou em algum formato de hipertexto comumente aceito.</p>
+<p class="text-sm mb-3">Uma resposta 300 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+<p class="text-sm">Nota: A proposta original para o código de status 300 definiu o campo de cabeçalho URI como fornecendo uma lista de representações alternativas, de modo que seria utilizável para 200, 300 e 406 respostas e ser transferido em respostas para o método HEAD. No entanto, a falta de implantação e desacordo sobre a sintaxe levou a URI e Alternates (uma proposta subsequente) sendo descartados desta especificação. É possível comunicar a lista usando um conjunto de campos de cabeçalho de Link, cada um com uma relação de "alternativo", embora a implantação seja um problema do ovo e da galinha.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.4.1">RFC7231 Section 6.4.1</a>
+</span></small>
+
+

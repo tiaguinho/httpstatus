@@ -1,0 +1,31 @@
+---
+title: "301"
+subtitle: "Moved Permanently"
+date: 2021-03-01T14:01:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :moved_permanently
+  go: http.StatusMovedPermanently
+  symfony: Response::HTTP_MOVED_PERMANENTLY
+  python2: httplib.MOVED_PERMANENTLY
+  python3: http.client.MOVED_PERMANENTLY
+  python35: http.HTTPStatus.MOVED_PERMANENTLY
+---
+
+<p class="mb-1 text-lg">O recurso de destino foi atribuído a um novo URI permanente e quaisquer referências futuras a este recurso devem usar um dos URIs incluídos.</p>
+
+<p class="text-sm mb-3">Os clientes com recursos de edição de link devem vincular novamente as referências ao URI de solicitação efetivo a uma ou mais das novas referências enviadas pelo servidor, quando possível.</p>
+<p class="text-sm mb-3">O servidor DEVE gerar um campo de cabeçalho Location na resposta contendo uma referência URI preferencial para o novo URI permanente. O agente do usuário PODE usar o valor do campo Localização para redirecionamento automático. A carga útil de resposta do servidor geralmente contém uma pequena nota de hipertexto com um hiperlink para o(s) novo(s) URI(s).</p>
+<p class="text-sm mb-3">Nota: Por razões históricas, um agente do usuário PODE alterar o método de
+solicitação de POST para GET para a solicitação subsequente. Se esse comportamento for indesejado, o
+código de status <a href="/307">307 Temporary Redirect</a> pode ser usado em seu lugar.</p>
+<p class="text-sm">Uma resposta 301 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.4.2">RFC7231 Section 6.4.2</a>
+</span></small>
+
+

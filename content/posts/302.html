@@ -1,0 +1,29 @@
+---
+title: "302"
+subtitle: "Found"
+date: 2021-03-01T14:05:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  rails: :found
+  go: http.StatusFound
+  symfony: Response::HTTP_FOUND
+  python2: httplib.FOUND
+  python3: http.client.FOUND
+  python35: http.HTTPStatus.FOUND
+---
+
+<p class="mb-1 text-lg">O recurso de destino reside temporariamente em um URI diferente. Como o redirecionamento pode ser alterado ocasionalmente, o cliente deve continuar a usar o URI de solicitação efetivo para solicitações futuras.</p>
+
+<p class="text-sm mb-3">O servidor DEVE gerar um campo de cabeçalho Location na resposta contendo uma referência de URI para os diferentes URI. O agente do usuário PODE usar o valor do campo Localização para redirecionamento automático. A carga útil de resposta do servidor geralmente contém uma pequena nota de hipertexto com um hiperlink para os diferentes URIs.</p>
+<p class="text-sm">Nota: Por razões históricas, um agente do usuário PODE alterar o método de
+solicitação de POST para GET para a solicitação subsequente. Se esse comportamento for indesejado, o
+código de status <a href="/307">307 Temporary Redirect</a> pode ser usado em seu lugar.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">RFC7231 Section 6.4.3</a>
+</span></small>
+
+

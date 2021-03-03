@@ -1,0 +1,27 @@
+---
+title: "308"
+subtitle: "Permanent Redirect"
+date: 2021-03-01T14:23:15-03:00
+draft: false
+category: "3xx Redirection"
+references:
+  symfony: Response::HTTP_PERMANENTLY_REDIRECT
+---
+
+<p class="mb-1 text-lg">O recurso de destino foi atribuído a um novo URI permanente e quaisquer referências futuras a este recurso devem usar um dos URIs incluídos.</p>
+
+<p class="text-sm mb-3">Os clientes com recursos de edição de link devem vincular novamente as referências ao URI de solicitação efetivo a uma ou mais das novas referências enviadas pelo servidor, quando possível.</p>
+<p class="text-sm mb-3">O servidor DEVE gerar um campo de cabeçalho Location na resposta contendo
+uma referência URI preferencial para o novo URI permanente. O agente do usuário PODE usar o valor do
+campo Location para redirecionamento automático. A carga útil de resposta do servidor geralmente contém uma pequena nota de hipertexto com um hiperlink para o(s) novo(s) URI(s).</p>
+<p class="text-sm mb-3">Uma resposta 308 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+<p class="text-sm">Nota: Este código de status é semelhante a <a href="/301">301 Moved
+  Permanently</a>, exceto que não permite alterar o método de solicitação de POST para GET.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc738#section-3">RFC738 Section 3</a>
+</span></small>
+
+
