@@ -1,0 +1,31 @@
+---
+title: "203"
+subtitle: "Non-Authoritative Information"
+date: 2021-03-01T11:06:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :non_authoratative_information
+  go: http.StatusNonAuthoritativeInfo
+  symfony: Response::HTTP_NON_AUTHORITATIVE_INFORMATION
+  python2: httplib.NON_AUTHORITATIVE_INFORMATION
+  python3: http.client.NON_AUTHORITATIVE_INFORMATION
+  python35: http.HTTPStatus.NON_AUTHORITATIVE_INFORMATION
+---
+
+<p class="mb-1 text-lg">A solicitação foi bem-sucedida, mas o payload incluído foi modificado da
+resposta 200 OK do servidor de origem por um proxy de transformação.</p>
+
+<p class="text-sm mb-3">Este código de status permite que o proxy notifique os destinatários quando uma transformação foi aplicada, uma vez que esse conhecimento pode impactar decisões posteriores sobre o conteúdo. Por exemplo, solicitações futuras de validação de cache para o conteúdo podem ser aplicáveis apenas ao longo do mesmo caminho de solicitação (por meio dos mesmos proxies).</p>
+<p class="text-sm mb-3">A resposta 203 é semelhante ao código de Aviso <a href="/214">214
+  Tranformation Applied</a>, que tem a vantagem de ser aplicável a respostas com qualquer código de status.</p>
+<p class="text-sm">Uma resposta 203 pode ser armazenada em cache por padrão; ou seja, a menos que
+indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.4">RFC7231 Section 6.3.4</a>
+</span></small>
+
+

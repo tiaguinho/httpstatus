@@ -1,0 +1,33 @@
+---
+title: "204"
+subtitle: "No Content"
+date: 2021-03-01T11:10:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :no_content
+  go: http.StatusNoContent
+  symfony: Response::HTTP_NO_CONTENT
+  python2: httplib.NO_CONTENT
+  python3: http.client.NO_CONTENT
+  python35: http.HTTPStatus.NO_CONTENT
+---
+
+<p class="mb-1 text-lg">O servidor atendeu à solicitação com êxito e não há conteúdo adicional a ser
+enviado na resposta.</p>
+
+<p class="text-sm mb-3">Os metadados nos campos do cabeçalho da resposta referem-se ao recurso de destino e sua representação selecionada após a aplicação da ação solicitada.</p>
+<p class="text-sm mb-3">Por exemplo, se um código de status 204 for recebido em resposta a uma solicitação PUT e a resposta contiver um campo de cabeçalho ETag, então o PUT foi bem-sucedido e o valor do campo ETag contém a tag de entidade para a nova representação desse recurso de destino.</p>
+<p class="text-sm mb-3">A resposta 204 permite que um servidor indique que a ação foi aplicada com sucesso ao recurso de destino, ao mesmo tempo que implica que o agente do usuário não precisa se afastar de sua "visualização de documento" atual (se houver). O servidor assume que o agente do usuário fornecerá alguma indicação do sucesso ao seu usuário, de acordo com sua própria interface, e aplicará quaisquer metadados novos ou atualizados na resposta à sua representação ativa.</p>
+<p class="text-sm mb-3">Por exemplo, um código de status 204 é comumente usado com interfaces de edição de documentos correspondendo a uma ação "salvar", de modo que o documento sendo salvo permaneça disponível para o usuário editar. Também é freqüentemente usado com interfaces que esperam que as transferências de dados automatizadas sejam predominantes, como em sistemas de controle de versão distribuídos.</p>
+<p class="text-sm mb-3">Uma resposta 204 é encerrada pela primeira linha vazia após os campos de cabeçalho porque não pode conter um corpo de mensagem.</p>
+<p class="text-sm">Uma resposta 204 pode ser armazenada em cache por padrão; ou seja, a menos que
+indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.5">RFC7231 Section 6.3.5</a>
+</span></small>
+
+

@@ -1,0 +1,38 @@
+---
+title: "207"
+subtitle: "Multi-Status"
+date: 2021-03-01T11:20:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :multi_status
+  symfony: Response::HTTP_MULTI_STATUS
+---
+
+<p class="mb-1 text-lg">Uma resposta Multi-Status transmite informações sobre vários recursos em
+situações onde vários códigos de status podem ser apropriados.</p>
+
+<p class="text-sm mb-3">O corpo de resposta Multi-Status padrão é uma entidade HTTP text/xml ou application/xml com um elemento raiz 'multistatus'. Outros elementos contêm códigos de status de séries 200, 300, 400 e 500 gerados durante a invocação do método. Os códigos de status da série 100 NÃO DEVEM ser registrados em um elemento XML de 'resposta'.</p>
+<p class="text-sm mb-3">Embora '207' seja usado como o código de status de resposta geral, o destinatário precisa consultar o conteúdo do corpo de resposta de multistatus para obter mais informações sobre o sucesso ou falha da execução do método. A resposta PODE ser usada em casos de sucesso, sucesso parcial e também em situações de falha.</p>
+<p class="text-sm mb-3">O elemento raiz 'multistatus' contém zero ou mais elementos de 'resposta' em qualquer ordem, cada um com informações sobre um recurso individual. Cada elemento de 'resposta' DEVE ter um elemento 'href' para identificar o recurso.</p>
+<p class="text-sm mb-3">Uma resposta Multi-Status usa um de dois formatos distintos para representar o status:</p>
+<ul class="list-decimal text-sm ml-6">
+  <li>Um elemento 'status' como filho do elemento 'resposta' indica o status da execução da mensagem
+    para o recurso identificado como um todo. Algumas definições de método fornecem informações
+    sobre códigos de status específicos que os clientes devem estar preparados para ver em uma
+    resposta. No entanto, os clientes DEVEM ser capazes de lidar com outros códigos de status,
+    usando as regras genéricas definidas na <a href="https://tools.ietf.org/html/rfc2616#section-10"
+      class="text-indigo-500">RFC2616 Seção 10</a>.</li>
+  <li>Para PROPFIND e PROPPATCH, o formato foi estendido usando o elemento 'propstat' em vez de
+    'status', fornecendo informações sobre propriedades individuais de um recurso. Este formato é
+    específico para PROPFIND e PROPPATCH e é descrito em detalhes na <a href="https://tools.ietf.org/html/rfc4918#section-9.1" class="text-indigo-500">RFC4918 Seção
+      9.1</a> e <a href="https://tools.ietf.org/html/rfc4918#section-9.2" class="text-indigo-500">RFC4918 Seção 9.2</a>.</li>
+</ul>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc4918#section-13">RFC4918 Section 13</a>
+</span></small>
+
+

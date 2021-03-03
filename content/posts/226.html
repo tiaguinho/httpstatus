@@ -1,0 +1,31 @@
+---
+title: "226"
+subtitle: "Im Used"
+date: 2021-03-01T11:42:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :im_used
+  symfony: Response::HTTP_IM_USED
+---
+
+<p class="mb-1 text-lg">O servidor atendeu a uma solicitação GET para o recurso e a resposta é uma representação do resultado de uma ou mais manipulações de instância aplicadas à instância atual.</p>
+
+<p class="text-sm mb-3">A instância atual real pode não estar disponível, exceto pela combinação
+desta resposta com outras respostas anteriores ou futuras, conforme apropriado para a(s)
+manipulação(ões) de instância específica(s). Se assim for, os cabeçalhos da instância resultante são
+o resultado da combinação dos cabeçalhos da resposta 226 e das outras instâncias, seguindo as regras
+da <a href="https://tools.ietf.org/html/rfc2616#section-13.5.3">seção 13.5.3</a> da especificação HTTP/1.1.</p>
+<p class="text-sm mb-3">O pedido DEVE ter incluído um campo de cabeçalho A-IM listando pelo menos uma instância de manipulação. A resposta DEVE incluir um campo de cabeçalho Etag fornecendo a tag de entidade da instância atual.</p>
+<p class="text-sm mb-3">Uma resposta recebida com um código de status de 226 PODE ser armazenada por
+um cache e usada em resposta a uma solicitação subsequente, sujeita ao mecanismo de expiração de
+HTTP e quaisquer cabeçalhos Cache-Control e aos requisitos da <a href="https://tools.ietf.org/html/rfc3229#section-10.6">seção 10.6</a>.</p>
+<p class="text-sm">Uma resposta recebida com um código de status 226 PODE ser usada por um cache, em conjunto com uma entrada de cache para a instância base, para criar uma entrada de cache para a instância atual.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc3229#section-10.4.1">RFC3229 Section 10.4.1</a>
+</span></small>
+
+

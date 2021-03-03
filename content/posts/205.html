@@ -1,0 +1,30 @@
+---
+title: "205"
+subtitle: "Reset Content"
+date: 2021-03-01T11:14:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :reset_content
+  go: http.StatusResetContent
+  symfony: Response::HTTP_RESET_CONTENT
+  python2: httplib.RESET_CONTENT
+  python3: http.client.RESET_CONTENT
+  python35: http.HTTPStatus.RESET_CONTENT
+---
+
+<p class="mb-1 text-lg">O servidor atendeu à solicitação e deseja que o agente do usuário redefina a "visualização do documento", que fez com que a solicitação fosse enviada, ao estado original recebido do servidor de origem.</p>
+
+<p class="text-sm mb-3">Esta resposta tem como objetivo oferecer suporte a um caso de uso comum de entrada de dados em que o usuário recebe conteúdo que suporta a entrada de dados (um formulário, bloco de notas, tela, etc.), insere ou manipula dados nesse espaço, faz com que os dados inseridos sejam enviados em um pedido e, em seguida, o mecanismo de entrada de dados é redefinido para a próxima entrada para que o usuário possa facilmente iniciar outra ação de entrada.</p>
+<p class="text-sm">Como o código de status 205 implica que nenhum conteúdo adicional será fornecido,
+um servidor NÃO DEVE gerar um payload em uma resposta 205. Em outras palavras, um servidor DEVE
+fazer uma das seguintes ações para uma resposta 205: a) indicar um corpo de comprimento zero para a
+resposta, incluindo um campo de cabeçalho Content-Length com um valor de 0; b) indicar um payload de comprimento zero para a resposta, incluindo um campo de cabeçalho Transfer-Encoding com um valor de chunked e um corpo de mensagem consistindo em um único chunk de comprimento zero; ou, c) feche a conexão imediatamente após enviar a linha em branco encerrando a seção do cabeçalho.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.6">RFC7231 Section 6.3.6</a>
+</span></small>
+
+

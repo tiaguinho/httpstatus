@@ -1,0 +1,27 @@
+---
+title: "202"
+subtitle: "Accepted"
+date: 2021-03-01T11:01:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :accepted
+  go: http.StatusAccepted
+  symfony: Response::HTTP_ACCEPTED
+  python2: httplib.ACCEPTED
+  python3: http.client.ACCEPTED
+  python35: http.HTTPStatus.ACCEPTED
+---
+
+<p class="mb-1 text-lg">A solicitação foi aceita para processamento, mas o processamento não foi concluído. A solicitação pode ou não ser atendida, pois pode ser proibida quando o processamento realmente ocorrer.</p>
+
+<p class="text-sm mb-3">Não há facilidade em HTTP para reenviar um código de status de uma operação assíncrona</p>
+<p class="text-sm">A resposta 202 é intencionalmente evasiva. Seu objetivo é permitir que um servidor aceite uma solicitação para algum outro processo (talvez um processo orientado a lote que é executado apenas uma vez por dia) sem exigir que a conexão do agente do usuário com o servidor persista até que o processo seja concluído. A representação enviada com esta resposta deve descrever o status atual da solicitação e apontar (ou incorporar) um monitor de status que pode fornecer ao usuário uma estimativa de quando a solicitação será atendida.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.3">RFC7231 Section 6.3.3</a>
+</span></small>
+
+

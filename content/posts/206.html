@@ -1,0 +1,75 @@
+---
+title: "206"
+subtitle: "Partial Content"
+date: 2021-03-01T11:18:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :partial_content
+  go: http.StatusPartialContent
+  symfony: Response::HTTP_PARTIAL_CONTENT
+  python2: httplib.PARTIAL_CONTENT
+  python3: http.client.PARTIAL_CONTENT
+  python35: http.HTTPStatus.PARTIAL_CONTENT
+---
+
+<p class="mb-1 text-lg">O servidor está atendendo com sucesso uma solicitação de intervalo para o
+recurso de destino, transferindo uma ou mais partes da representação selecionada que correspondem
+aos intervalos satisfatórios encontrados no campo de cabeçalho de intervalo da solicitação.</p>
+
+<p class="text-sm mb-3">Se uma única parte estiver sendo transferida, o servidor que está gerando a resposta 206 DEVE gerar um campo de cabeçalho Content-Range, descrevendo o intervalo da representação selecionada e uma carga útil consistindo do intervalo. Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 230px;">
+HTTP/1.1 206 Partial Content
+Date: Wed, 15 Nov 1995 06:25:24 GMT
+Last-Modified: Wed, 15 Nov 1995 04:58:08 GMT
+Content-Range: bytes 21010-47021/47022
+Content-Length: 26012
+Content-Type: image/gif
+
+... 26012 bytes of partial image data ...
+</textarea>
+<p class="text-sm mb-3">Se várias partes estão sendo transferidas, o servidor que gera a resposta 206 DEVE gerar um payload "multipart/byteranges" e um campo de cabeçalho Content-Type contendo o tipo de mídia multipart/byteranges e seu parâmetro de limite obrigatório. Para evitar confusão com respostas de parte única, um servidor NÃO DEVE gerar um campo de cabeçalho Content-Range na seção de cabeçalho HTTP de uma resposta de parte múltipla (este campo será enviado em cada parte).</p>
+<p class="text-sm mb-3">Dentro da área do cabeçalho de cada parte do corpo no payload em
+multipartes, o servidor DEVE gerar um campo de cabeçalho Content-Range correspondente ao intervalo
+que está sendo encerrado nessa parte do corpo. Se a representação selecionada tivesse um campo de
+cabeçalho Content-Type em uma resposta <a href="/200">200 OK</a>, o servidor DEVERIA gerar esse mesmo campo Content-Type na área do cabeçalho de cada parte do corpo. Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 510px;">
+HTTP/1.1 206 Partial Content
+Date: Wed, 15 Nov 1995 06:25:24 GMT
+Last-Modified: Wed, 15 Nov 1995 04:58:08 GMT
+Content-Length: 1741
+Content-Type: multipart/byteranges; boundary=THIS_STRING_SEPARATES
+
+--THIS_STRING_SEPARATES
+Content-Type: application/pdf
+Content-Range: bytes 500-999/8000
+
+...the first range...
+--THIS_STRING_SEPARATES
+Content-Type: application/pdf
+Content-Range: bytes 7000-7999/8000
+
+...the second range
+--THIS_STRING_SEPARATES--
+</textarea>
+<p class="text-sm mb-3">Quando vários intervalos são solicitados, um servidor PODE unir qualquer um dos intervalos que se sobrepõem, ou que são separados por uma lacuna que é menor do que a sobrecarga de envio de várias partes, independentemente da ordem em que a especificação de intervalo de bytes correspondente apareceu em o campo de cabeçalho de intervalo recebido. Uma vez que a sobrecarga típica entre as partes de uma carga útil multipart/byteranges é de cerca de 80 bytes, dependendo do tipo de mídia da representação selecionada e do comprimento do parâmetro de limite escolhido, pode ser menos eficiente transferir muitas pequenas partes disjuntas do que transferir todo o selecionado representação.</p>
+<p class="text-sm mb-3">Um servidor NÃO DEVE gerar uma resposta multiparte a um pedido de um único intervalo, uma vez que um cliente que não solicita várias partes pode não suportar respostas multipartes. No entanto, um servidor PODE gerar uma carga útil multipart/byteranges com apenas uma única parte do corpo se vários intervalos forem solicitados e apenas um intervalo for considerado satisfatório ou apenas um intervalo permanecer após a coalescência. Um cliente que não consegue processar uma resposta multipart/byteranges NÃO DEVE gerar uma solicitação que solicite vários intervalos.</p>
+<p class="text-sm mb-3">Quando um payload de resposta multipartes é gerada, o servidor DEVE enviar as partes na mesma ordem em que a especificação de intervalo de bytes correspondente apareceu no campo de cabeçalho de intervalo recebido, excluindo os intervalos que foram considerados insatisfatórios ou que foram agrupados em outros intervalos. Um cliente que recebe uma resposta multiparte DEVE inspecionar o campo de cabeçalho Content-Range presente em cada parte do corpo para determinar qual intervalo está contido nessa parte do corpo; um cliente não pode contar com o recebimento dos mesmos intervalos que solicitou, nem do mesmo pedido que solicitou.</p>
+<p class="text-sm mb-3">Quando uma resposta 206 é gerada, o servidor DEVE gerar os seguintes campos
+de cabeçalho, além dos exigidos acima, se o campo teria sido enviado em uma resposta <a href="/200">200 OK</a> para a mesma solicitação: Data, Cache-Control, ETag, Expires, Content-Location e Vary.</p>
+<p class="text-sm mb-3">Se um 206 for gerado em resposta a uma solicitação com um campo de cabeçalho
+If-Range, o remetente NÃO DEVE gerar outros campos de cabeçalho de representação além dos exigidos
+acima, porque o cliente é entendido como já tendo uma resposta anterior contendo esses campos de
+cabeçalho. Caso contrário, o remetente DEVE gerar todos os campos de cabeçalho de representação que
+teriam sido enviados em uma resposta <a href="/200">200 OK</a> ao mesmo pedido.</p>
+<p class="text-sm">Uma resposta 206 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma por controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.6">RFC7231 Section 6.3.6</a>
+</span></small>
+
+

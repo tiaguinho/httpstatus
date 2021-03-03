@@ -1,0 +1,62 @@
+---
+title: "200"
+subtitle: "OK"
+date: 2021-03-01T10:46:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  rails: :ok
+  go: http.StatusOk
+  symfony: Response::HTTP_OK
+  python2: httplib.OK
+  python3: http.client.OK
+  python35: http.HTTPStatus.OK
+---
+
+<p class="mb-1 text-lg">A solicitação foi bem-sucedida.</p>
+
+<p class="text-sm mb-3">
+O payload enviado em uma resposta 200 depende do método de solicitação. Para os métodos definidos
+por esta especificação, o significado pretendido do paylod pode ser resumido como:
+</p>
+<ul class="list-disc text-sm ml-6 mb-3">
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">GET</span>
+    uma representação do recurso de destino;
+  </li>
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">HEAD</span>
+    a mesma representação que GET, mas sem os dados de representação;
+  </li>
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">POST</span>
+    uma representação do status ou resultados obtidos da ação;
+  </li>
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">PUT ou DELETE</span>
+    uma representação do status da ação;
+  </li>
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">OPTIONS</span>
+    uma representação das opções de comunicação;
+  </li>
+  <li>
+    <span class="border border-solid border-gray-200 rounded-md px-1">TRACE</span>
+    uma representação da mensagem de solicitação recebida pelo servidor final.
+  </li>
+</ul>
+<p class="text-sm mb-3">Além das respostas para CONNECT, uma resposta 200 sempre tem um payload,
+embora um servidor de origem PODE gerar um corpo de payload de comprimento zero. Se nenhum payload
+for desejado, o servidor de origem deve enviar <a href="/204">204 No Content</a> em seu lugar. Para CONNECT, nenhum
+payload é permitido porque o resultado bem-sucedido é um túnel, que começa imediatamente após a
+seção de cabeçalho da resposta 200.</p>
+<p class="text-sm">Uma resposta 200 pode ser armazenada em cache por padrão; ou seja, a menos que
+indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">RFC7231 Section 6.3.1</a>
+</span></small>
+
+

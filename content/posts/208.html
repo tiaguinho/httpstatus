@@ -1,0 +1,26 @@
+---
+title: "208"
+subtitle: "Already Reported"
+date: 2021-03-01T11:37:15-03:00
+draft: false
+category: "2xx Success"
+references:
+  symfony: Response::HTTP_ALREADY_REPORTED
+---
+
+<p class="mb-1 text-lg">Usado dentro de um elemento de resposta DAV: propstat para evitar enumerar os membros internos de várias ligações para a mesma coleção repetidamente.</p>
+
+<p class="text-sm mb-3">Para cada associação a uma coleção dentro do escopo da solicitação, apenas
+uma será relatada com um status 200, enquanto os elementos DAV:response subsequentes para todas as
+outras associações usarão o status 208 e nenhum elemento DAV:response para seus descendentes será incluído.</p>
+<p class="text-sm mb-3">Observe que o status 208 só ocorrerá para solicitações "Depth: infinity" e que é de particular importância quando as várias ligações de coleção causam um loop de ligação</p>
+<p class="text-sm mb-3">Um cliente pode solicitar a propriedade DAV:resource-id em uma solicitação PROPFIND para garantir que ele possa reconstruir com precisão a estrutura de ligação de uma coleção com várias ligações para um único recurso.</p>
+<p class="text-sm">Para compatibilidade com os clientes que não estão cientes do código de status 208 que aparece em corpos de resposta multistatus, NÃO DEVE ser usado a menos que o cliente tenha sinalizado o suporte para esta especificação usando o cabeçalho de solicitação "DAV". Em vez disso, um status 508 Loop Detected deve ser retornado quando um loop de ligação é descoberto. Isso permite que o servidor retorne o 508 como o status de retorno de nível superior, se o descobrir antes de iniciar a resposta, ou no meio de um multistatus, se o descobrir no meio do fluxo de uma resposta multistatus.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc5842#section-7.1">RFC5842 Section 7.1</a>
+</span></small>
+
+
