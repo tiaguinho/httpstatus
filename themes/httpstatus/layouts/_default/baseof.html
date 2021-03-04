@@ -2,11 +2,12 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-      <div class="container max-w-md mx-auto py-8">
+      <div class="container max-w-md mx-auto">
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>
+        <p class="text-center text-sm py-6 text-gray-500">feito com <span class="text-red-600">&hearts;</span> por <a href="https://twitter.com/_ttemporin">@_ttemporin</a></p>
         {{- partial "footer.html" . -}}
       </div>
     </body>
