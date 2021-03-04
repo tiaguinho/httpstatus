@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+<a href="/" class="block text-xs text-indigo-500 font-semibold border-b border-gray-100 border-solid
+  py-3 mb-4">
+  <span class="text-xl">&larr;</span> todos os status
+</a>
+
 <h3 class="font-mono text-base text-gray-600">{{ .Params.category }}</h3>
 <h1 class="text-gray-500 text-xl">
   <span class="font-bold text-indigo-500">{{ .Title }}</span> {{ .Params.subtitle }}
@@ -9,9 +14,28 @@
   {{ .Content }}
 </div>
 
-<h1 class="text-gray-500 text-lg mb-3">
+<h2 class="text-gray-500 text-lg">
+  Dúvidas? 
+</h2>
+{{ if eq .Params.category "1xx Informativo" }}
+  <a href="https://github.com/tiaguinho/httpstatus/discussions/categories/1xx" class="text-indigo-500 text-sm">Entre no nosso fórum de discussão</a>
+{{ end }}
+{{ if eq .Params.category "2xx Success" }}
+  <a href="https://github.com/tiaguinho/httpstatus/discussions/categories/2xx" class="text-indigo-500 text-sm">Entre no nosso fórum de discussão</a>
+{{ end }}
+{{ if eq .Params.category "3xx Redirection" }}
+  <a href="https://github.com/tiaguinho/httpstatus/discussions/categories/3xx" class="text-indigo-500 text-sm">Entre no nosso fórum de discussão</a>
+{{ end }}
+{{ if eq .Params.category "4xx Client Error" }}
+  <a href="https://github.com/tiaguinho/httpstatus/discussions/categories/4xx" class="text-indigo-500 text-sm">Entre no nosso fórum de discussão</a>
+{{ end }}
+{{ if eq .Params.category "5xx Server Error" }}
+  <a href="https://github.com/tiaguinho/httpstatus/discussions/categories/5xx" class="text-indigo-500 text-sm">Entre no nosso fórum de discussão</a>
+{{ end }}
+
+<h2 class="text-gray-500 text-lg my-3">
   Referências para o código <span class="font-bold text-indigo-500">{{ .Title }}</span> 
-</h1>
+</h2>
 
 <ul class="list-none mt-1 mb-3 space-y-2">
   {{ if $.Param "references.rails" }}
