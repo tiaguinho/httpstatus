@@ -2,7 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-      <div class="container max-w-md mx-auto">
+      <div class="container md:max-w-md mx-auto px-8 md:px-0">
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
