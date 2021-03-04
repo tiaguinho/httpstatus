@@ -1,0 +1,25 @@
+---
+title: "422"
+subtitle: "Unprocessable Entity"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :unprocessable_entity
+  symfony: Response:HTTP_UNPROCESSABLE_ENTITY
+---
+
+<p class="mb-1 text-lg">O servidor entende o tipo de conteúdo da entidade de solicitação (portanto,
+um código de status <a href="/415">415 de tipo de mídia não suportado</a> é inadequado) e a sintaxe
+da entidade de solicitação está correta (portanto, um código de status <a href="/400">400 Bad
+  Request</a> é inadequado), mas não foi capaz de processar instruções.</p>
+
+<p class="text-sm">Por exemplo, essa condição de erro pode ocorrer se um corpo de solicitação XML contiver instruções XML bem formadas (ou seja, sintaticamente corretas), mas semanticamente erradas.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc4918#section-11.2">RFC4918 Section 11.2</a>
+</span></small>
+
+

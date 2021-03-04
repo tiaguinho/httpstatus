@@ -1,0 +1,27 @@
+---
+title: "414"
+subtitle: "Request-URI Too Long"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :request_uri_too_large
+  go: http.StatusRequestURITooLarge
+  symfony: Response::HTTP_REQUEST_URI_TOO_LARGE
+  python2: httplib.REQUEST_URI_TOO_LARGE
+  python3: http.client.REQUEST_URI_TOO_LARGE
+  python35: http.HTTPStatus.REQUEST_URI_TOO_LARGE
+---
+
+<p class="mb-1 text-lg">O servidor está se recusando a atender à solicitação porque o destino da solicitação é mais longo do que o servidor está disposto a interpretar.</p>
+
+<p class="text-sm mb-3">Esta condição rara só é provável de ocorrer quando um cliente converteu indevidamente uma solicitação POST em uma solicitação GET com informações de consulta longas, quando o cliente caiu em um "buraco negro" de redirecionamento (por exemplo, um prefixo URI redirecionado que aponta para um seu próprio sufixo) ou quando o servidor está sendo atacado por um cliente que tenta explorar brechas de segurança em potencial.</p>
+<p class="text-sm">Uma resposta 414 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.12">RFC7231 Section 6.5.12</a>
+</span></small>
+
+

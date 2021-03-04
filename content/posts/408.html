@@ -1,0 +1,26 @@
+---
+title: "408"
+subtitle: "Request Timeout"
+date: 2021-03-01T14:47:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :request_timeout
+  go: http.StatusRequestTimeout
+  symfony: Response::HTTP_REQUEST_TIMEOUT
+  python2: httplib.REQUEST_TIMEOUT
+  python3: http.client.REQUEST_TIMEOUT
+  python35: http.HTTPStatus.REQUEST_TIMEOUT
+---
+
+<p class="mb-1 text-lg">O servidor não recebeu uma mensagem de solicitação completa dentro do tempo em que estava preparado para aguardar.</p>
+
+<p class="text-sm">Um servidor DEVE enviar a opção "fechar" conexão na resposta, uma vez que 408 indica que o servidor decidiu encerrar a conexão em vez de continuar esperando. Se o cliente tiver um pedido pendente em trânsito, o cliente PODE repetir esse pedido em uma nova conexão.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.1">RFC7231 Section 6.1</a>
+</span></small>
+
+

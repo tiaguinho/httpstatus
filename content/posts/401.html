@@ -1,0 +1,29 @@
+---
+title: "401"
+subtitle: "Unauthorized"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :unauthorized
+  go: http.StatusUnauthorized
+  symfony: Response::HTTP_UNAUTHORIZED
+  python2: httplib.UNAUTHORIZED
+  python3: http.client.UNAUTHORIZED
+  python35: http.HTTPStatus.UNAUTHORIZED
+---
+
+<p class="mb-1 text-lg">A solicitação não foi aplicada porque não possui credenciais de autenticação válidas para o recurso de destino.</p>
+
+<p class="text-sm mb-3">O servidor que gera uma resposta 401 DEVE enviar um campo de cabeçalho WWW-Authenticate contendo pelo menos um desafio aplicável ao recurso de destino.</p>
+<p class="text-sm">Se a solicitação incluiu credenciais de autenticação, a resposta 401 indica que a
+autorização foi recusada para essas credenciais. O agente do usuário PODE repetir a solicitação com
+um campo de cabeçalho de autorização novo ou substituído. Se a resposta 401 conter o mesmo desafio que a resposta anterior, e o agente do usuário já tentou autenticação pelo menos uma vez, então o agente do usuário DEVE apresentar a representação anexa ao usuário, uma vez que geralmente contém informações diagnósticas relevantes.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7235#section-3.1">RFC7235 Section 3.1</a>
+</span></small>
+
+

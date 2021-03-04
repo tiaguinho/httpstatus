@@ -1,0 +1,26 @@
+---
+title: "407"
+subtitle: "Proxy Authentication Required"
+date: 2021-03-01T14:43:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :proxy_authentication_required
+  go: http.StatusProxyAuthRequired
+  symfony: Response::HTTP_PROXY_AUTHENTICATION_REQUIRED
+  python2: httplib.PROXY_AUTHENTICATION_REQUIRED
+  python3: http.client.PROXY_AUTHENTICATION_REQUIRED
+  python35: http.HTTPStatus.PROXY_AUTHENTICATION_REQUIRED
+---
+
+<p class="mb-1 text-lg">Semelhante a <a href="/401">401 Unauthorized</a>, mas indica que o cliente precisa se autenticar para usar um proxy.</p>
+
+<p class="text-sm">O proxy DEVE enviar um campo de cabeçalho Proxy-Authenticate contendo um desafio aplicável a esse proxy para o recurso de destino. O cliente PODE repetir o pedido com um campo de cabeçalho Proxy-Authorization novo ou substituído.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7235#section-3.2">RFC7235 Section 3.2</a>
+</span></small>
+
+

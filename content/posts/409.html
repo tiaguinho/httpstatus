@@ -1,0 +1,27 @@
+---
+title: "409"
+subtitle: "Conflict"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :conflict
+  go: http.StatusConflict
+  symfony: Response::HTTP_CONFLICT
+  python2: httplib.CONFLICT
+  python3: http.client.CONFLICT
+  python35: http.HTTPStatus.CONFLICT
+---
+
+<p class="mb-1 text-lg">A solicitação não pôde ser concluída devido a um conflito com o estado atual do recurso de destino. Esse código é usado em situações em que o usuário pode resolver o conflito e reenviar a solicitação.</p>
+
+<p class="text-sm mb-3">O servidor DEVE gerar um payload que inclua informações suficientes para que um usuário reconheça a origem do conflito.</p>
+<p class="text-sm">Os conflitos são mais prováveis de ocorrer em resposta a uma solicitação PUT. Por exemplo, se o controle de versão estava sendo usado e a representação sendo PUT incluía alterações em um recurso que conflita com aquelas feitas por uma solicitação anterior (de terceiros), o servidor de origem pode usar uma resposta 409 para indicar que não pode completar o solicitação. Nesse caso, a representação da resposta provavelmente conteria informações úteis para mesclar as diferenças com base no histórico de revisão.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.8">RFC7231 Section 6.5.8</a>
+</span></small>
+
+

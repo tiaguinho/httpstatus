@@ -1,0 +1,37 @@
+---
+title: "416"
+subtitle: "Requested Range Not Satisfiable"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :requested_range_not_satisfiable
+  go: http.StatusRequestedRangeNotSatisfiable
+  symfony: Response::HTTP_REQUESTED_RANGE_NOT_SATISFIABLE
+  python2: httplib.REQUESTED_RANGE_NOT_SATISFIABLE
+  python3: http.client.REQUESTED_RANGE_NOT_SATISFIABLE
+  python35: http.HTTPStatus.REQUESTED_RANGE_NOT_SATISFIABLE
+---
+
+<p class="mb-1 text-lg">Nenhum dos intervalos no campo do cabeçalho de intervalo da solicitação se sobrepõe à extensão atual do recurso selecionado ou o conjunto de intervalos solicitado foi rejeitado devido a intervalos inválidos ou uma solicitação excessiva de intervalos pequenos ou sobrepostos.</p>
+
+<p class="text-sm mb-3">Para intervalos de bytes, a falha em sobrepor a extensão atual significa que a posição do primeiro byte de todos os valores de especificação de intervalo de bytes eram maiores do que o comprimento atual da representação selecionada. Quando este código de status é gerado em resposta a uma solicitação de intervalo de bytes, o remetente DEVE gerar um campo de cabeçalho Content-Range especificando o comprimento atual da representação selecionada.
+
+Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 90px;">
+HTTP/1.1 416 Range Not Satisfiable
+Date: Fri, 20 Jan 2012 15:41:54 GMT
+Content-Range: bytes */47022
+</textarea>
+<p class="text-sm">Nota: Como os servidores são livres para ignorar Range, muitas implementações
+simplesmente responderão com toda a representação selecionada em uma resposta <a href="/200">200
+  OK</a>. Isso ocorre em parte porque a maioria dos clientes está preparada para receber <a href="/200">200 OK</a> para concluir a tarefa (embora com menos eficiência) e em parte porque os clientes podem não parar de fazer uma solicitação parcial inválida até que tenham recebido uma representação completa. Assim, os clientes não podem depender do recebimento de uma resposta 416 Faixa não satisfatória, mesmo quando for mais apropriado.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-4.4">RFC7231 Section 4.4</a>
+</span></small>
+
+

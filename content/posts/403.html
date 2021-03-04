@@ -1,0 +1,30 @@
+---
+title: "403"
+subtitle: "Forbidden"
+date: 2021-03-01T14:35:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :forbidden
+  go: http.StatusForbidden
+  symfony: Response::HTTP_FORBIDDEN
+  python2: httplib.FORBIDDEN
+  python3: http.client.FORBIDDEN
+  python35: http.HTTPStatus.FORBIDDEN
+---
+
+<p class="mb-1 text-lg">O servidor entendeu a solicitação, mas se recusa a autorizá-la.</p>
+
+<p class="text-sm mb-3">Um servidor que deseja tornar público o motivo da proibição da solicitação
+pode descrever esse motivo no payload de resposta (se houver).</p>
+<p class="text-sm mb-3">Se as credenciais de autenticação foram fornecidas na solicitação, o servidor as considera insuficientes para conceder acesso. O cliente NÃO DEVE repetir automaticamente o pedido com as mesmas credenciais. O cliente PODE repetir o pedido com credenciais novas ou diferentes. No entanto, uma solicitação pode ser proibida por motivos não relacionados às credenciais.</p>
+<p class="text-sm">Um servidor de origem que deseja "ocultar" a existência atual de um recurso de
+destino proibido PODE responder com um código de status <a href="/404">404 Not Found</a>.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.3">RFC7231 Section 6.5.3</a>
+</span></small>
+
+

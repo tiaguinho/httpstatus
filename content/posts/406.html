@@ -1,0 +1,30 @@
+---
+title: "406"
+subtitle: "Not Acceptable"
+date: 2021-03-01T14:41:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :not_acceptable
+  go: http.StatusNotAcceptable
+  symfony: Response::HTTP_NOT_ACCEPTABLE
+  python2: httplib.NOT_ACCEPTABLE
+  python3: http.client.NOT_ACCEPTABLE
+  python35: http.HTTPStatus.NOT_ACCEPTABLE
+---
+
+<p class="mb-1 text-lg">O recurso de destino não tem uma representação atual que seria aceitável para o agente do usuário, de acordo com os campos de cabeçalho de negociação proativa recebidos na solicitação, e o servidor não está disposto a fornecer uma representação padrão.</p>
+
+<p class="text-sm">O servidor DEVE gerar um payload contendo uma lista de características de
+representação disponíveis e identificadores de recursos correspondentes, a partir dos quais o
+usuário ou agente do usuário pode escolher o mais apropriado. Um agente de usuário PODE selecionar
+automaticamente a escolha mais apropriada dessa lista. No entanto, esta especificação não define
+nenhum padrão para tal seleção automática, conforme descrito na <a href=https://tools.ietf.org/html/rfc7231#section-6.4.1"">RFC7231 Seção 6.4.1</a>.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.6">RFC7231 Section 6.5.6</a>
+</span></small>
+
+

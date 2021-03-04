@@ -1,0 +1,26 @@
+---
+title: "412"
+subtitle: "Precondition Failed"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :precondition_failed
+  go: http.StatusPreconditionFailed
+  symfony: Response::HTTP_PRECONDITION_FAILED
+  python2: httplib.PRECONDITION_FAILED
+  python3: http.client.PRECONDITION_FAILED
+  python35: http.HTTPStatus.PRECONDITION_FAILED
+---
+
+<p class="mb-1 text-lg">Uma ou mais condições fornecidas nos campos do cabeçalho da solicitação foram avaliadas como falsas quando testadas no servidor.</p>
+
+<p class="text-sm">Esse código de resposta permite que o cliente coloque pré-condições no estado do recurso atual (suas representações e metadados atuais) e, assim, evita que o método de solicitação seja aplicado se o recurso de destino estiver em um estado inesperado.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7232#section-4.2">RFC7232 Section 4.2</a>
+</span></small>
+
+

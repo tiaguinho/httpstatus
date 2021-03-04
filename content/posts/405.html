@@ -1,0 +1,27 @@
+---
+title: "405"
+subtitle: "Method Not Allowed"
+date: 2021-03-01T14:39:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :method_not_allowed
+  go: http.StatusMethodNotAllowed
+  symfony: Response::HTTP_METHOD_NOT_ALLOWED
+  python2: httplib.METHOD_NOT_ALLOWED
+  python3: http.client.METHOD_NOT_ALLOWED
+  python35: http.HTTPStatus.METHOD_NOT_ALLOWED
+---
+
+<p class="mb-1 text-lg">O método recebido na linha de solicitação é conhecido pelo servidor de origem, mas não é suportado pelo recurso de destino.</p>
+
+<p class="text-sm mb-3">O servidor de origem DEVE gerar um campo Permitir cabeçalho em uma resposta 405 contendo uma lista dos métodos atualmente suportados pelo recurso de destino.</p>
+<p class="text-sm">Uma resposta 405 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.5">RFC7231 Section 6.5.5</a>
+</span></small>
+
+

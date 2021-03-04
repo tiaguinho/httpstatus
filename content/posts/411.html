@@ -1,0 +1,27 @@
+---
+title: "411"
+subtitle: "Length Required"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :length_required
+  go: http.StatusLengthRequired
+  symfony: Response::HTTP_LENGTH_REQUIRED
+  python2: httplib.LENGTH_REQUIRED
+  python3: http.client.LENGTH_REQUIRED
+  python35: http.HTTPStatus.LENGTH_REQUIRED
+---
+
+<p class="mb-1 text-lg">O servidor se recusa a aceitar a solicitação sem um tamanho de conteúdo definido.</p>
+
+<p class="text-sm">O cliente PODE repetir a solicitação se adicionar um campo de cabeçalho
+Content-Length válido contendo o tamanho do corpo da mensagem na mensagem de solicitação.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.10">RFC7231 Section 6.5.10</a>
+</span></small>
+
+

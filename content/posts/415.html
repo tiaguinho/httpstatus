@@ -1,0 +1,26 @@
+---
+title: "415"
+subtitle: "Unsupported Media Type"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :unsupported_media_type
+  go: http.StatusUnsupportedMediaType
+  symfony: Response::HTTP_UNSUPPORTED_MEDIA_TYPE
+  python2: httplib.UNSUPPORTED_MEDIA_TYPE
+  python3: http.client.UNSUPPORTED_MEDIA_TYPE
+  python35: http.HTTPStatus.UNSUPPORTED_MEDIA_TYPE
+---
+
+<p class="mb-1 text-lg">O servidor de origem se recusa a atender à solicitação porque o payload está em um formato não suportado por este método no recurso de destino.</p>
+
+<p class="text-sm">O problema de formato pode ser devido ao Content-Type ou Content-Encoding indicado na solicitação, ou como resultado da inspeção direta dos dados.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.13">RFC7231 Section 6.5.13</a>
+</span></small>
+
+

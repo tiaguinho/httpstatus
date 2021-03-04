@@ -1,0 +1,39 @@
+---
+title: "431"
+subtitle: "Request Header Fields Too Large"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  symfony: Response::HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE
+---
+
+<p class="mb-1 text-lg">O servidor não deseja processar a solicitação porque seus campos de cabeçalho são muito grandes. O pedido PODE ser reenviado após reduzir o tamanho dos campos do cabeçalho do pedido.</p>
+
+<p class="text-sm mb-3">Ele pode ser usado quando o conjunto de campos de cabeçalho de solicitação no total é muito grande e quando um único campo de cabeçalho está em falta. No último caso, a representação da resposta DEVE especificar qual campo de cabeçalho é muito grande.
+
+Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 340px;">
+HTTP/1.1 431 Request Header Fields Too Large
+Content-Type: text/html
+
+<html>
+  <head>
+    <title>Request Header Fields Too Large</title>
+  </head>
+  <body>
+    <h1>Request Header Fields Too Large</h1>
+    <p>The "Example" header was too large.</p>
+  </body>
+</html>
+</textarea>
+<p class="text-sm">Respostas com o código de status 431 NÃO DEVEM ser armazenadas por um cache.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc6585#section-5">RFC6585 Section 5</a>
+</span></small>
+
+

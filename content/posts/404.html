@@ -1,0 +1,28 @@
+---
+title: "404"
+subtitle: "Not Found"
+date: 2021-03-01T14:38:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :not_found
+  go: http.StatusNotFound
+  symfony: Response::HTTP_NOT_FOUND
+  python2: httplib.NOT_FOUND
+  python3: http.client.NOT_FOUND
+  python35: http.HTTPStatus.NOT_FOUND
+---
+
+<p class="mb-1 text-lg">O servidor de origem não encontrou uma representação atual para o recurso de destino ou não está disposto a divulgar que existe.</p>
+
+<p class="text-sm mb-3">Um código de status 404 não indica se essa falta de representação é
+temporária ou permanente; o código de status <a href="/410">410 Gone</a> tem preferência sobre 404 se o servidor de origem sabe, presumivelmente por meio de alguns meios configuráveis, que a condição provavelmente será permanente.</p>
+<p class="text-sm">Uma resposta 404 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">RFC7231 Section 6.5.4</a>
+</span></small>
+
+

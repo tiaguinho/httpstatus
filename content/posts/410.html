@@ -1,0 +1,29 @@
+---
+title: "410"
+subtitle: "Gone"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :gone
+  go: http.StatusGone
+  symfony: Response::HTTP_GONE
+  python2: httplib.GONE
+  python3: http.client.GONE
+  python35: http.HTTPStatus.GONE
+---
+
+<p class="mb-1 text-lg">O recurso de destino não está mais disponível no servidor de origem e essa condição provavelmente será permanente.</p>
+
+<p class="text-sm mb-3">Se o servidor de origem não sabe, ou não tem facilidade para determinar, se
+a condição é permanente ou não, o código de status <a href="/404">404 Not Found</a> deve ser usado.</p>
+<p class="text-sm mb-3">A resposta 410 tem como objetivo principal auxiliar na tarefa de manutenção da web, notificando o destinatário de que o recurso está intencionalmente indisponível e que os proprietários do servidor desejam que os links remotos para esse recurso sejam removidos. Tal evento é comum para serviços promocionais por tempo limitado e para recursos pertencentes a indivíduos não mais associados ao site do servidor de origem. Não é necessário marcar todos os recursos permanentemente indisponíveis como "perdidos" ou manter a marca por qualquer período de tempo - isso é deixado ao critério do proprietário do servidor.</p>
+<p class="text-sm">Uma resposta 410 pode ser armazenada em cache por padrão; ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.9">RFC7231 Section 6.5.9</a>
+</span></small>
+
+

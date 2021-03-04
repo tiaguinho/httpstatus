@@ -1,0 +1,38 @@
+---
+title: "428"
+subtitle: "Precondition Required"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  symfony: Response::HTTP_PRECONDITION_REQUIRED
+---
+
+<p class="mb-1 text-lg">O servidor de origem requer que a solicitação seja condicional.</p>
+
+<p class="text-sm mb-3">Seu uso típico é para evitar o problema de "atualização perdida", onde um cliente obtém o estado de um recurso, modifica-o e o coloca de volta no servidor, quando entretanto um terceiro modificou o estado no servidor, levando a um conflito. Ao exigir que as solicitações sejam condicionais, o servidor pode garantir que os clientes estejam trabalhando com as cópias corretas.</p>
+<p class="text-sm mb-3">As respostas que usam este código de status DEVEM explicar como reenviar a solicitação com êxito. Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 370px;">
+HTTP/1.1 428 Precondition Required
+Content-Type: text/html
+
+<html>
+  <head>
+    <title>Precondition Required</title>
+  </head>
+  <body>
+    <h1>Precondition Required</h1>
+    <p>This request is required to be conditional; try using "If-Match".</p>
+  </body>
+</html>
+</textarea>
+<p class="text-sm">Respostas com o código de status 428 NÃO DEVEM ser armazenadas por um cache.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc6585#section-3">RFC6585 Section 3</a>
+</span></small>
+
+

@@ -1,0 +1,26 @@
+---
+title: "421"
+subtitle: "Misdirected Request"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :misdirected_request
+---
+
+<p class="mb-1 text-lg">A solicitação foi direcionada a um servidor que não pode produzir uma resposta. Isso pode ser enviado por um servidor que não está configurado para produzir respostas para a combinação de esquema e autoridade que estão incluídos no URI do pedido.</p>
+
+<p class="text-sm mb-3">Os clientes que recebem uma resposta de 421 Solicitação mal direcionada de
+um servidor PODEM tentar novamente a solicitação - seja o método de solicitação idempotente ou não -
+por meio de uma conexão diferente. Isso é possível se uma conexão for reutilizada1ou se um serviço
+alternativo for selecionado <a href="https://tools.ietf.org/html/rfc7540#ref-ALT-SVC">ALT-SVC</a>.</p>
+<p class="text-sm mb-3">Este código de status NÃO DEVE ser gerado por proxies.</p>
+<p class="text-sm">Uma resposta 421 é armazenável em cache por padrão, ou seja, a menos que indicado de outra forma pela definição do método ou controles de cache explícitos.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7540#section-9.1.2">RFC7540 Section 9.1.2</a>
+</span></small>
+
+

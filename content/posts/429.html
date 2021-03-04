@@ -1,0 +1,43 @@
+---
+title: "429"
+subtitle: "Too Many Requests"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  symfony: Response::HTTP_TOO_MANY_REQUESTS
+---
+
+<p class="mb-1 text-lg">O usuário enviou muitas solicitações em um determinado período de tempo
+("rate limiting").</p>
+
+<p class="text-sm mb-3">As representações de resposta DEVEM incluir detalhes explicando a condição, e PODEM incluir um cabeçalho Retry-After indicando quanto tempo esperar antes de fazer um novo pedido.
+
+Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 400px;">
+HTTP/1.1 429 Too Many Requests
+Content-Type: text/html
+Retry-After: 3600
+
+<html>
+  <head>
+    <title>Too Many Requests</title>
+  </head>
+  <body>
+    <h1>Too Many Requests</h1>
+    <p>I only allow 50 requests per hour to this Web site per
+    logged in user. Try again soon.</p>
+  </body>
+</html>
+</textarea>
+<p class="text-sm mb-3">Observe que esta especificação não define como o servidor de origem identifica o usuário, nem como conta as solicitações. Por exemplo, um servidor de origem que está limitando as taxas de solicitação pode fazer isso com base nas contagens de solicitações por recurso, em todo o servidor ou mesmo entre um conjunto de servidores. Da mesma forma, ele pode identificar o usuário por suas credenciais de autenticação ou um cookie com estado.</p>
+<p class="text-sm">Respostas com o código de status 429 NÃO DEVEM ser armazenadas por um cache.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc6585#section-4">RFC6585 Section 4</a>
+</span></small>
+
+

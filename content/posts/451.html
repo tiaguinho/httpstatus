@@ -1,0 +1,45 @@
+---
+title: "451"
+subtitle: "Unavailable For Legal Reasons"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  symfony: Response::HTTP_UNAVAILABLE_FOR_LEGAL_REASONS
+---
+
+<p class="mb-1 text-lg">O servidor está negando acesso ao recurso como consequência de uma demanda legal.</p>
+
+<p class="text-sm mb-3">O servidor em questão pode não ser um servidor de origem. Esse tipo de demanda legal geralmente afeta mais diretamente as operações de ISPs e mecanismos de pesquisa.</p>
+<p class="text-sm mb-3">As respostas que usam este código de status DEVEM incluir uma explicação, no corpo da resposta, dos detalhes da demanda legal: a parte que a faz, a legislação ou regulamento aplicável e a que classes de pessoa e recursos se aplica. Por exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 450px;">
+HTTP/1.1 451 Unavailable For Legal Reasons
+Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
+Content-Type: text/html
+
+<html>
+  <head>
+    <title>Unavailable For Legal Reasons</title>
+  </head>
+  <body>
+    <h1>Unavailable For Legal Reasons</h1>
+    <p>This request may not be serviced in the Roman Province
+    of Judea due to the Lex Julia Majestatis, which disallows
+    access to resources hosted on servers deemed to be
+    operated by the People's Front of Judea.</p>
+  </body>
+</html>
+</textarea>
+<p class="text-sm mb-3">A utilização do código de status 451 não implica na existência ou inexistência do recurso nomeado na solicitação. Ou seja, é possível que, caso as demandas judiciais sejam retiradas, a solicitação do recurso ainda não seja bem-sucedida.</p>
+<p class="text-sm mb-3">Observe que, em muitos casos, os clientes ainda podem acessar o recurso negado usando contramedidas técnicas, como uma VPN ou a rede Tor.</p>
+<p class="text-sm">Uma resposta 451 pode ser armazenada em cache por padrão; ou seja, a menos que
+indicado de outra forma pela definição do método ou controles de cache explícitos; consulte <a href="https://tools.ietf.org/html/rfc7234">RFC7234</a>.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7725">RFC7725</a>
+</span></small>
+
+

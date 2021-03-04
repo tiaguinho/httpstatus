@@ -1,0 +1,34 @@
+---
+title: "426"
+subtitle: "Upgrade Required"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :upgrade_required
+  symfony: Response::HTTP_UPGRADE_REQUIRED
+---
+
+<p class="mb-1 text-lg">O servidor se recusa a realizar a solicitação usando o protocolo atual, mas pode estar disposto a fazê-lo depois que o cliente atualizar para um protocolo diferente.</p>
+
+<p class="text-sm mb-3">O servidor DEVE enviar um campo de cabeçalho de atualização em uma resposta 426 para indicar o (s) protocolo (s) necessário (s)
+
+Exemplo:</p>
+<textarea class="px-3 border border-gray-200 border-solid rounded text-sm leading-loose w-full
+  overflow-hidden" disabled style="height: 200px;">
+HTTP/1.1 426 Upgrade Required
+Upgrade: HTTP/3.0
+Connection: Upgrade
+Content-Length: 53
+Content-Type: text/plain
+
+This service requires use of the HTTP/3.0 protocol.
+</textarea>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.15">RFC7231 Section 6.5.15</a>
+</span></small>
+
+

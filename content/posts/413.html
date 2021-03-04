@@ -1,0 +1,27 @@
+---
+title: "413"
+subtitle: "Payload Too Large"
+date: 2021-03-01T14:30:15-03:00
+draft: false
+category: "4xx Client Error"
+references:
+  rails: :request_entity_too_large
+  go: http.StatusRequestEntityTooLarge
+  symfony: Response::HTTP_REQUEST_ENTITY_TOO_LARGE
+  python2: httplib.REQUEST_ENTITY_TOO_LARGE
+  python3: http.client.REQUEST_ENTITY_TOO_LARGE
+  python35: http.HTTPStatus.REQUEST_ENTITY_TOO_LARGE
+---
+
+<p class="mb-1 text-lg">O servidor se recusa a processar uma solicitação porque o payload da solicitação é maior do que o servidor deseja ou é capaz de processar.</p>
+
+<p class="text-sm mb-3">O servidor PODE fechar a conexão para evitar que o cliente continue o pedido.</p>
+<p class="text-sm">Se a condição for temporária, o servidor DEVE gerar um campo de cabeçalho Retry-After para indicar que é temporário e após o tempo o cliente PODE tentar novamente.</p>
+
+<hr class="bg-gray-100 my-3" />
+
+<small>Source: <span class="text-indigo-500">
+    <a href="https://tools.ietf.org/html/rfc7231#section-6.5.11">RFC7231 Section 6.5.11</a>
+</span></small>
+
+
